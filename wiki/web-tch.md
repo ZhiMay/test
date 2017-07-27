@@ -24,4 +24,6 @@
       });
 ## node exports:
   http://blog.csdn.net/pwiling/article/details/51958693 
+##pug api:
+  https://pugjs.org/api/reference.html
 
