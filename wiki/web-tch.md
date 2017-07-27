@@ -3,7 +3,7 @@
 
 ## handlebars a html demo: 
   https://stackoverflow.com/questions/30030551/node-express-how-to-render-handlebars-html-page-to-file
-    eg:
+  ### eg:
       var Handlebars = require('handlebars');
 
       var source = "<p>Hello, my name is {{name}}. I am from {{hometown}}. I have " +
@@ -24,6 +24,6 @@
       });
 ## node exports:
   http://blog.csdn.net/pwiling/article/details/51958693 
-##pug api:
+## pug api:
   https://pugjs.org/api/reference.html
 
