@@ -1,4 +1,4 @@
-##handlebars generate html: 
+## handlebars generate html: 
  https://github.com/patrickkettner/grunt-compile-handlebars
 
 ## handlebars a html demo: 
