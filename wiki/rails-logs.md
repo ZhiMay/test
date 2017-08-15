@@ -34,6 +34,27 @@
     rails generate scaffold Micropost content:text user_id:integer
     rails db:migrate
 
+#### 7. 限制微博的长度(app/models/micropost.rb,140 个字符)
+    class Micropost < ApplicationRecord
+      validates :content, length: { maximum:  140 }
+    end
+#### 8. 一个用户拥有多篇微博(User与Microposts)
+    class User < ApplicationRecord
+      has_many :microposts
+    end
+#### 9. 一篇微博属于一个用户(User与Microposts)
+    class Micropost < ApplicationRecord
+      belongs_to :user
+      validates :content, length: { maximum: 140 }
+    end
+#### 关系
+    first_user = User.first
+    first_user.microposts
+    micropost = first_user.microposts.first
+    micropost.user
+
+
+
 
 
 
