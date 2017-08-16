@@ -47,11 +47,32 @@
       belongs_to :user
       validates :content, length: { maximum: 140 }
     end
-#### 关系
+#### 10. 关系
     first_user = User.first
     first_user.microposts
     micropost = first_user.microposts.first
     micropost.user
+#### 11. 验证微博内容存在性的代码
+    class Micropost < ApplicationRecord
+      belongs_to :user
+      validates :content, length: { maximum: 140 },
+                          presence: true
+    end
+#### 12. 为 User 模型添加存在性验证
+    class User < ApplicationRecord
+      has_many :microposts
+      validates FILL_IN, presence: true # 把 FILL_IN 换成正确的代码
+      validates FILL_IN, presence: true # 把 FILL_IN 换成正确的代码
+    end
+#### 13. 继承体系
+
+User 和 Micropost 都（通过 < 符号）继承自ApplicationRecord 类，而这个类继承自 ActiveRecord::Base 类,继承 ActiveRecord::Base 类，模型对象才能与数据库通讯，才能把数据库中的列看做 Ruby 中的属性，等等.
+
+UsersController 和 MicropostsController 都继承自 ApplicationController,通过继承ActionController::Base，Users 控制器和 Microposts控制器获得了很多功能。例如，处理模型对象的能力、过滤入站 HTTP 请求，以及把视图渲染成 HTML 的能力。Rails 应用中的所有控制器都继承自 ApplicationController，所以其中定义的规则会自动运用于应用中的每个动作。
+
+#### 14.命名规则
+
+脚手架中使用的名称与模型一样，是单数；而资源和控制器使用复数。因此，这里要使用 User，而不是 Users。
 
 
 
