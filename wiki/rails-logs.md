@@ -92,9 +92,11 @@ $ rails generate controller static_pages ...
     $ rails destroy  controller StaticPages home help
 
 会使用下面的命令生成模型：
+
     $ rails generate model User name:string email:string
 
 这个操作可以使用下面的命令撤销：
+
     $ rails destroy model User
 
 
