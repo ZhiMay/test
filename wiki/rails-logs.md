@@ -74,7 +74,13 @@ UsersController 和 MicropostsController 都继承自 ApplicationController,通�
 
 脚手架中使用的名称与模型一样，是单数；而资源和控制器使用复数。因此，这里要使用 User，而不是 Users。
 
+# 第 3 章
 
+#### 1.生成静态页面
+
+```
+$rails generate controller StaticPages home help
+```
 
 
 
