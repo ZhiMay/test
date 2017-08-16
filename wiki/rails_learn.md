@@ -92,6 +92,23 @@ yield语句：在方法内部使用yield语句来占位，当方法执行到yiel
     stylesheet_link_tag 'application', { media: 'all','data-turbolinks-track': 'reload' }
     stylesheet_link_tag 'application', media: 'all','data-turbolinks-track': 'reload'
 
+## rails blank 方法
+
+    >> "".blank?
+    => true
+    >> "      ".empty?
+    => false
+    >> "      ".blank?
+    => true
+    >> nil.blank?
+    => true
+
+可以看出，一个包含空格的字符串不是空的（empty），却是空白的（blank）。还要注意，nil 也是空白的
+
+## 实例变量
+
+在 Rails 中，实例变量的意义在于，它们自动在视图中可用。而通常实例变量的作用是在 Ruby 类中不同的方法之间传递值。
+
 
 
 
