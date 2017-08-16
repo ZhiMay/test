@@ -11,7 +11,7 @@ bi
   2.  bundle install
   3.  重启server
 
-# ruby block
+## ruby block
 
 [ruby中的block和yield](https://haoluobo.com/2011/07/ruby-block-yield/)
 
@@ -30,6 +30,7 @@ yield语句：在方法内部使用yield语句来占位，当方法执行到yiel
     end
 
 程序的运行结果为：
+
     "=start"
     "hello"
     "a"
@@ -65,7 +66,7 @@ yield语句：在方法内部使用yield语句来占位，当方法执行到yiel
   => {:name=>"Michael Hartl", :email=>"michael@example.com"}
   #:name 本身是一种数据类型（符号），但 name: 却没有意义。不过在散列字面量中，:name => 和 name: 作用一样。因此，{ :name => "Michael Hartl" } 和 { name: "Michael Hartl" } 是等效的。如果要表示符号，只能使用 :name（冒号在前面）。
   ```
-# inspect方法，它的作用是返回被调用对象的字符串字面量表示形式
+## inspect方法，它的作用是返回被调用对象的字符串字面量表示形式
     >> puts (1..5).to_a            # 把数组以字符串的形式打印出来
     1
     2
@@ -85,7 +86,7 @@ yield语句：在方法内部使用yield语句来占位，当方法执行到yiel
     >> p :name         #等价于puts:name.inspect'
     :name
 
-# Ruby 中，括号是可以省略的
+## Ruby 中，括号是可以省略的
 
     # 如果最后一个参数是散列，可以省略花括号
     stylesheet_link_tag 'application', { media: 'all','data-turbolinks-track': 'reload' }
