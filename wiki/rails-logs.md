@@ -88,6 +88,7 @@ $rails generate controller StaticPages home help
 $ rails generate controller static_pages ...
 ```
 **撤销操作**,rails generate 命令还会自动修改routes.rb 文件,rails destroy 命令完成撤销操作.
+
     $ rails generate controller StaticPages home help
     $ rails destroy  controller StaticPages home help
 
