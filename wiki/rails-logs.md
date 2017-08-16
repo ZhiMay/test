@@ -100,6 +100,55 @@ $ rails generate controller static_pages ...
 
     $ rails destroy model User
 
+对模型来说，还涉及到撤销迁移，迁移通过下面的命令改变数据库的状态：
+
+    $ rails db:migrate
+
+我们可以使用下面的命令撤销前一个迁移操作：
+
+    $ rails db:rollback
+
+如果要回到最开始的状态，可以使用
+
+    $ rails db:migrate VERSION=0
+
+如下的规则(原理)
+
+    get 'static_pages/home'
+
+把发给 /static_pages/home 的请求映射到 StaticPages 控制器的 home 动作上,get 表明这个路由响应的是 GET 请求,GET 是最常用的 HTTP 操作，用于读取网络中的数据。它的意思是“读取一个网页”,访问 /static_pages/home 时，Rails 会在 StaticPages 控制器中寻找 home 动作，然后执行该动作，再渲染相应的视图,这里，home 动作是空的，所以访问 /static_pages/home 后只会渲染视图。
+
+##### 2.  添加about pages
+
+step 1: 添加 about 路由
+
+    Rails.application.routes.draw do
+      get  'static_pages/home'
+      get  'static_pages/help'
+      get  'static_pages/about'
+      root 'application#hello'
+    end
+
+step 2: 在 StaticPages 控制器中添加 about 动作
+
+    class StaticPagesController < ApplicationController
+
+      def home
+      end
+
+      def help
+      end
+
+      def about
+      end
+    end
+
+step 3: 添加about.html.haml 页面
+
+
+
+
+
 
 
 

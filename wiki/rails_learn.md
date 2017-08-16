@@ -4,3 +4,10 @@
 [rails list 2](https://c9.io/tek_knowledge/acts_as_list)
 [acts_as_list](https://github.com/swanandp/acts_as_list)
 
+gco Gemfile.lock
+bi
+＃安装gem 包
+  1.  在对应的gemfile 填写对应的gem 包
+  2.  bundle install
+  3.  重启server
+
