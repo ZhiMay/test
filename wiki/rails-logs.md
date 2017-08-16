@@ -74,13 +74,32 @@ UsersController 和 MicropostsController 都继承自 ApplicationController,通�
 
 脚手架中使用的名称与模型一样，是单数；而资源和控制器使用复数。因此，这里要使用 User，而不是 Users。
 
-# 第 3 章
+# 第 3 章(生成静态页面)
 
-#### 1.生成静态页面
+#### 1.生成 StaticPages 控制器
 
 ```
 $rails generate controller StaticPages home help
 ```
+
+**controller 命名**,StaticPages,使用驼峰式命名法,，创建的控制器文件名则是蛇底式static_pages_controller.rb,其实在命令行中也可以使用蛇底式：
+
+```
+$ rails generate controller static_pages ...
+```
+**撤销操作**,rails generate 命令还会自动修改routes.rb 文件,rails destroy 命令完成撤销操作.
+    $ rails generate controller StaticPages home help
+    $ rails destroy  controller StaticPages home help
+
+会使用下面的命令生成模型：
+    $ rails generate model User name:string email:string
+
+这个操作可以使用下面的命令撤销：
+    $ rails destroy model User
+
+
+
+
 
 
 

@@ -1,3 +1,5 @@
+[为知笔记 Markdown 新手指南](http://www.wiz.cn/feature-markdown.html)
+[献给写作者的 Markdown 新手指南](http://www.jianshu.com/p/q81RER)
 # 标题
 # 这是 H1
 
