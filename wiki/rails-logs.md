@@ -155,10 +155,29 @@ step 3: 添加about.html.haml 页面
 
 #### 2. URL 和 具名路由
 
+具名路由定义：
+
+get 规则由
+
+    get 'static_pages/help'
+
+改成
+    get  '/help', to: 'static_pages#help'
+
+这种新形式把发给 /help 的 GET 请求交给StaticPages 控制器中的 help 动作处理。help_path -> '/help'(static_pages_help_path ->  '/static_pages/help')
+
+
    |  页面    |  URL  |   具名路由     |
    |  ---    | ----  |    ------     |
    |  首页    |  /    |  root_path    |
    |  关于    | /about |  about_path  |
+
+#### 3.用户注册（Users 控制器）
+```
+$ rails generate controller Users new
+```
+
+
 
 
 
