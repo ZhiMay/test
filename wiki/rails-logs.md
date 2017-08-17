@@ -145,6 +145,23 @@ step 2: 在 StaticPages 控制器中添加 about 动作
 
 step 3: 添加about.html.haml 页面
 
+# 第 5 章 完善布局
+
+#### 1. 局部视图
+
+    = render 'layouts/header'
+
+这行代码会寻找一个名为 app/views/layouts/_header.html.haml的文件，执行其中的代码，然后把结果插入视图
+
+#### 2. URL 和 具名路由
+
+   |  页面    |  URL  |   具名路由     |
+   |  ---    | ----  |    ------     |
+   |  首页    |  /    |  root_path    |
+   |  关于    | /about |  about_path  |
+
+
+
 
 
 
