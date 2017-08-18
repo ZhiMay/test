@@ -113,7 +113,8 @@ yield语句：在方法内部使用yield语句来占位，当方法执行到yiel
 
  解决方法1:执行的db:migrate前,已经有表了，会出现重复，删除表rm -rf db/development.sqlite3
 
- ［博客](https://stackoverflow.com/questions/32296380/rake-dbmigrate-error-table-already-exists)
+ [博客](https://stackoverflow.com/questions/32296380/rake-dbmigrate-error-table-already-exists)
+
  [博客2](https://stackoverflow.com/questions/7874330/rake-aborted-table-users-already-exists)
 
  解决方法2（修改迁移文件）
@@ -145,6 +146,7 @@ yield语句：在方法内部使用yield语句来占位，当方法执行到yiel
     drop_table :votes
   end
 end
+## 运行rails db:migrate
  ```
 
 

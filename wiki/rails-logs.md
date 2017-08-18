@@ -226,6 +226,98 @@ rails g migration add_description_to_categories
 
 rails db:migrate
 ```
+#### 5.创建用户对象
+
+```
+#不想修改数据库中的数据，所以要在沙盒（sandbox）模式中启动控制台：
+$ rails console --sandbox 
+user = User.new(name: "Michael Hartl", email: "mhartl@example.com")
+
+user = User.new(name: "Michael Hartl", email: "mhartl@example.com")
+user.save #如果保存成功，save 方法返回 true，否则返回 false
+
+虽然一般习惯把创建和保存分成如上所示的两步完成，不过 Active Record 也允许我们使用 User.create 方法把这两步合成一步：
+User.create(name: "A Nother", email: "another@example.org") 
+#User.create 的返回值不是 true 或 false
+#create 的逆操作是destroy：foo.destroy,返回值是对象,
+User.find(3)
+User.find_by(email: "mhartl@example.com")
+
+#### 6.更新用户对象
+```
+>> user           # 只是为了查看 user 对象的属性是什么
+=> #<User id: 1, name: "Michael Hartl", email: "mhartl@example.com",
+created_at: "2016-05-23 19:05:58", updated_at: "2016-05-23 19:05:58">
+>> user.email = "mhartl@example.net"
+=> "mhartl@example.net"
+>> user.save
+=> true
+```
+注意，如果想把改动写入数据库，必须执行最后一个方法。我们可以执行 reload 命令来看一下没保存的话是什么情况。reload 方法会使用数据库中的数据重新加载对象：
+```
+>> user.email
+=> "mhartl@example.net"
+>> user.email = "foo@bar.com"
+=> "foo@bar.com"
+>> user.reload.email
+=> "mhartl@example.net"
+```
+更新数据的第二种常用方式是使用 update_attributes 方法
+```
+>> user.update_attributes(name: "The Dude", email: "dude@abides.org")
+=> true
+>> user.name
+=> "The Dude"
+>> user.email
+=> "dude@abides.org"
+```
+#### 7.name 添加存在性验证
+```
+class User < ApplicationRecord
+  validates :name, presence: true #validates(:name, presence: true)
+end
+#user.errors.full_messages
+```
+#### 8.计算密码哈希值
+
+安全密码机制基本上用一个 Rails 方法即可实现，这个方法是 has_secure_password:
+```
+class User < ApplicationRecord
+  .
+  .
+  .
+  has_secure_password
+end
+```
+
+#### 9.添加字段（迁移命名为add_password_digest_to_users）
+要创建一个适当的迁移文件，添加 password_digest 列，迁移的名字随意，不过最好以 to_users 结尾，因为这样 Rails 会自动生成一个向 users 表添加列的迁移
+
+```
+rails g migration add_password_digest_to_users password_digest:string
+```
+#### 10.单独生成migration 文件
+```
+$ rails g migration CreateTestss name:string part_number:string
+#生成migration文件
+class CreateTestss < ActiveRecord::Migration[5.0]
+  def change
+    create_table :testsses do |t|
+      t.string :name
+      t.string :part_number
+      ＃加上这个t.timestamps
+    end
+  end
+end
+＃运行rails db:migrate
+```
+
+
+
+
+
+
+
 
 
 
