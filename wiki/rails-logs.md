@@ -23,6 +23,7 @@
 #### 3. rails generate 命令就可以使用 Rails 的脚手架
 
 传给 scaffold 的参数是资源名的单数形式（这里是User),后面可以再跟着一些可选参数，指定数据模型中的字段：
+
     rails generate scaffold User name:string email:string
 
 #### 4. 迁移数据库(使用新的 User 数据模型更新数据库)
@@ -176,6 +177,57 @@ get 规则由
 ```
 $ rails generate controller Users new
 ```
+
+# 第 6 章 用户建模
+
+#### 1. Active Record 
+
+Rails 为解决数据持久化提供的默认解决方案是，使用数据库存储需要长期使用的数据。与数据库交互默认使用的是Active Record。Active Record 提供了一系列方法，无需使用关系数据库所用的结构化查询语言（Structured Query Language，简称 SQL），[2]就能创建、保存和查询数据对象。Rails 还支持迁移（migration）功能，允许我们使用纯 Ruby 代码定义数据结构，而不用学习 SQL 数据定义语言（Data Definition Language，简称 DDL）。
+[创建migration](http://blog.csdn.net/kucss/article/details/7252388)
+[创建migration2](http://wiki.jikexueyuan.com/project/rails-practice/Chapter_4/4.1.html)
+
+#### 2. 生成 User 模型
+```
+$ rails generate model User name:string email:string 
+
+#注意，控制器名是复数，模型名是单数：控制器是 Users，而模型是 User，执行 rails g model 时，Rails就会顺便新增对应的 Migration 档案，
+```
+#### 3. User 模型的迁移文件（创建 users 表）
+
+db/migrate/[timestamp]_create_users.rb
+```
+class CreateUsers < ActiveRecord::Migration[5.0]
+  def change
+    create_table :users do |t|
+      t.string :name
+      t.string :email
+
+      t.timestamps
+    end
+  end
+end
+
+```
+迁移文件中有一个名为 change的方法，定义要对数据库做什么操作。在代码清单 6.2 中，change 方法使用 Rails 提供的 create_table 方法在数据库中新建一个表，用于存储用户。create_table 方法可以接受一个块，有一个块变量 t（“table”）。在块中，create_table 方法通过 t 对象在数据库中创建 name 和 email 两个列，二者均为 string 类型。[4]表名是复数形式（users），不过模型名是单数形式（User），这是 Rails 在用词上的一个约定：模型表示单个用户，而数据库表中存储了很多用户。块中最后一行 t.timestamps 是个特殊的方法，它会自动创建 created_at 和 updated_at 两个列，分别记录创建用户的时间戳和更新用户的时间戳。Migrations（数据库迁移）可以让你用 Ruby 程序来修改数据库结构。
+常用命令:
+｀｀｀
+rails g migrattion add #新增字段
+rake db:migrate  #生成数据表
+｀｀｀
+
+#### 4.执行这个迁移
+```
+$ rails db:migrate
+```
+第一次运行 db:migrate 命令时会创建 db/development.sqlite3 文件，这是 SQLite [5]数据库文件,Rails 使用 db/ 目录中的 schema.rb 文件记录数据库的结构
+
+```
+rails g migration add_description_to_categories
+
+rails db:migrate
+```
+
+
 
 
 

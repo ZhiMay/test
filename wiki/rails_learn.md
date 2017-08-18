@@ -109,6 +109,45 @@ yield语句：在方法内部使用yield语句来占位，当方法执行到yiel
 
 在 Rails 中，实例变量的意义在于，它们自动在视图中可用。而通常实例变量的作用是在 Ruby 类中不同的方法之间传递值。
 
+## 重复的表
+
+ 解决方法1:执行的db:migrate前,已经有表了，会出现重复，删除表rm -rf db/development.sqlite3
+
+ ［博客](https://stackoverflow.com/questions/32296380/rake-dbmigrate-error-table-already-exists)
+ [博客2](https://stackoverflow.com/questions/7874330/rake-aborted-table-users-already-exists)
+
+ 解决方法2（修改迁移文件）
+ ```
+  class CreateUsers < ActiveRecord::Migration[5.0]
+    def change
+      create_table :users do |t|
+        t.string :name
+        t.string :email
+
+        t.timestamps
+      end
+    end
+  end
+ ### 修改后
+ class CreateUsers < ActiveRecord::Migration[5.0]
+  def self.up
+    drop_table :users
+    def change
+      create_table :users do |t|
+        t.string :name
+        t.string :email
+
+        t.timestamps
+      end
+    end
+  end
+  def self.down
+    drop_table :votes
+  end
+end
+ ```
+
+
 
 
 
