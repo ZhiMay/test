@@ -320,6 +320,16 @@ class CreateTestss < ActiveRecord::Migration[5.0]
 end
 ＃运行rails db:migrate
 ```
+# 第 7 章 注册
+
+#### 1. 在网站布局中添加一些调试信息
+
+app/views/layouts/application.html.erb
+
+```
+<%= render 'layouts/footer' %>
+<%= debug(params) if Rails.env.development? %>
+```
 
 
 

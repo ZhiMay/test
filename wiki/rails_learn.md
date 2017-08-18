@@ -148,6 +148,36 @@ yield语句：在方法内部使用yield语句来占位，当方法执行到yiel
 end
 ## 运行rails db:migrate
  ```
+ ## Rails 环境
+
+ Rails 内建了三个环境，分别是测试环境、开发环境和生产环境。Rails 控制台默认使用的是开发环境
+
+```
+$ rails console
+Loading development environment
+>> Rails.env
+=> "development"
+>> Rails.env.development?
+=> true
+>> Rails.env.test?
+=> false
+```
+如果需要在其他环境中使用控制台（例如，在测试环境中调试），只需把环境名传给 console 命令即可：
+
+    $ rails console test
+    Loading test environment
+    >> Rails.env
+    => "test"
+    >> Rails.env.test?
+    => true
+Rails 本地服务器和控制台一样，默认使用开发环境，不过也可以在其他环境中运行：
+
+```
+$ rails server --environment production
+```
+如果想在生产环境中运行应用，要先有一个生产数据库。在生产环境中执行 rails db:migrate 命令可以生成这个数据库：
+
+    $ rails db:migrate RAILS_ENV=production
 
 
 
