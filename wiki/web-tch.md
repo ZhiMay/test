@@ -56,4 +56,8 @@ http://javascriptweekly.com/
 
 http://codepen.io/]
 
+微信开发搭建服务器  
+
+[微信本地开发环境搭建](http://www.jianshu.com/p/3dea103e9579)
+
 
