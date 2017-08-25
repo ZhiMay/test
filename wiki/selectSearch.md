@@ -5,7 +5,7 @@
 *  mapData : 搜索的列表数据,肯定是外部传入了...
 * mapData : 列表值映射
 
-｀｀｀
+```
 <select-search 
 style="max-width:195px" 
 placeholder="请选择广告主" 
@@ -13,7 +13,7 @@ placeholder="请选择广告主"
 :mapData="adHostDataList" 
 :mapDataFormat="{label:'userName',value:'userId'}">
 </select-search>
-｀｀｀
+```
 
 ### 代码
 

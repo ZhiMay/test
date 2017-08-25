@@ -43,3 +43,14 @@
 ## casperJs
 [casperJs](http://casperjs.org/)
 [ css3中单位px,em,rem,vh,vw,vmin,vmax的区别及浏览器支持情况](http://blog.csdn.net/jyy_12/article/details/42557241)
+[浏览器内核趣闻](http://www.jianshu.com/p/94abc5f88e11)
+[Chrome 网页调试技巧](http://www.jianshu.com/p/2a3e3f0b562b)
+
+link[https://www.lynda.com/
+
+http://css-weekly.com/
+
+http://javascriptweekly.com/
+
+http://codepen.io/]
+
