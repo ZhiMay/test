@@ -40,6 +40,8 @@
 [查看在线的版本 here](http://vuejs-news.herokuapp.com/)
 [sitepoint-editors/vuejs-news 源码](https://github.com/sitepoint-editors/vuejs-news/blob/master/index.html)
 [一个高度可定制的vue modal插件](https://github.com/shaodahong/dahong/issues/10)
+[组件分享好用的 Vue Component for Highcharts](https://juejin.im/entry/58f9c515570c350058cc10e8?utm_medium=hao.caibaojian.com&utm_source=hao.caibaojian.com)
+[不容错过的 Vue2.0 组件开发](http://hao.caibaojian.com/29008.html)
 ## casperJs
 [casperJs](http://casperjs.org/)
 [ css3中单位px,em,rem,vh,vw,vmin,vmax的区别及浏览器支持情况](http://blog.csdn.net/jyy_12/article/details/42557241)
@@ -53,4 +55,5 @@ http://css-weekly.com/
 http://javascriptweekly.com/
 
 http://codepen.io/]
+
 
