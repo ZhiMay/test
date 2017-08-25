@@ -31,3 +31,15 @@
 ## markdown 文档
   [markdown 教程](http://www.jianshu.com/p/1e402922ee32/)
   [javascript api](https://docs.microsoft.com/en-us/scripting/javascript/reference/reduce-method-array-javascript)
+## vw 和 vh 单位
+[纯CSS3使用vw和vh视口单位实现自适应](http://caibaojian.com/vw-vh.html)
+[CSS中如何使用视窗单位](https://www.w3cplus.com/css/simplify-your-stylesheets-with-the-magical-css-viewport-units.html)
+[前端开发博客](http://caibaojian.com/fe-daily-20170823.html)
+## vue
+[使用Vue.js和Axios从第三方API获取数据](http://caibaojian.com/fetching-data-with-vue-js.html)
+[查看在线的版本 here](http://vuejs-news.herokuapp.com/)
+[sitepoint-editors/vuejs-news 源码](https://github.com/sitepoint-editors/vuejs-news/blob/master/index.html)
+[一个高度可定制的vue modal插件](https://github.com/shaodahong/dahong/issues/10)
+## casperJs
+[casperJs](http://casperjs.org/)
+[ css3中单位px,em,rem,vh,vw,vmin,vmax的区别及浏览器支持情况](http://blog.csdn.net/jyy_12/article/details/42557241)

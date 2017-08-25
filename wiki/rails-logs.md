@@ -330,6 +330,23 @@ app/views/layouts/application.html.erb
 <%= render 'layouts/footer' %>
 <%= debug(params) if Rails.env.development? %>
 ```
+#### 2.在 Users 控制器中添加 debugger 方法:
+Rails 服务器的输出中会显示 byebug 提示符,若想退出 byebug，继续执行应用，可以按 Ctrl-D 键。把 show 动作中的 debugger 方法删除
+
+```
+def show
+  @user = User.find(params[:id])
+  debugger
+end
+```
+```
+(byebug)
+```
+我们可以把它当成 Rails 制台，在其中执行命令，查看应用的状态：
+```
+(byebug) @user.name
+"Example User"
+```
 
 
 
