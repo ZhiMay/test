@@ -29,7 +29,7 @@
 ## svn use:
 
   [svn 用法](https://www.codelast.com/%E5%8E%9F%E5%88%9B-linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8svn%E5%92%8Cgit%E7%9A%84%E4%B8%80%E4%BA%9B%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/)
-  
+
 ## markdown 文档
 
   [markdown 教程](http://www.jianshu.com/p/1e402922ee32/)
@@ -56,6 +56,25 @@
 [不容错过的 Vue2.0 组件开发](http://hao.caibaojian.com/29008.html)
 
 [Vue2 利用 v-model 实现组件props双向绑定的优美解决方案](https://segmentfault.com/a/1190000008662112)
+
+[vue 常用ui组件](http://blog.csdn.net/zgrkaka/article/details/53897202)
+
+[demo1](https://github.com/xiaotuni/vue2-demo)
+
+[demo2](https://github.com/halfrost/vue-objccn)
+
+[9个超赞的视觉效果](http://www.zcfy.cc/article/html-css-and-javascript-10-awesome-codepens-to-inspire-you-4101.html?t=new)
+
+[什么？页面卡顿？操作慢？](https://juejin.im/entry/59a67ef06fb9a024903aba71?utm_source=weixinqun&utm_medium=fe)
+
+1.面试的妹纸问我：web缓存设置不是后台的事情吗？
+http://t.cn/RNqxgSR
+
+2.Vue 组件间的样式污染
+http://t.cn/RNqiNlL
+
+3. 组件简介
+  http://www.cnblogs.com/keepfool/p/5625583.html
 
 ## casperJs
 
