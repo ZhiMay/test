@@ -12,7 +12,7 @@ new Vue({
       showmask: true
     }
   },
-  template:"<App :timeCount='timeCount' :showmask='showmask'></App>",
+  template:"<App :timeCount='timeCount' v-model='showmask'></App>",
   components:{
     "App":App
   }

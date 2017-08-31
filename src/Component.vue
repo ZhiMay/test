@@ -1,5 +1,5 @@
 <template>
-  <div id="timer-mask" v-show="visible">
+  <div id="timer-mask" v-show="visible" :value="value">
     <div class="timer-clock">
       <p class="title">你的操作过于频繁，请稍后重试！</p>
       <div class="time-num">{{leftime}}s</div>
@@ -8,14 +8,14 @@
 </template>
 <script>
 export default {
-  props: ["timeCount", "showmask"],
+  props: ["timeCount", "value"],
   data() {
     return {
       initTime: 60,
       leftime: "60",
       flag: false,
       count: 0,
-      visible: this.showmask
+      visible: false
     }
   },
   methods: {
@@ -41,6 +41,9 @@ export default {
   },
   mounted() {
     let _this = this;
+    if (_this.value) {
+      _this.visible = true;
+    }
     _this.initTime = _this.timeCount;
     let time = setInterval(function() {
       if (_this.flag == true) {
@@ -49,6 +52,15 @@ export default {
         _this.timeDown(_this);
       }
     }, 1000);
+  },
+  watch: {
+    value(val) {
+      console.log(val);
+      this.visible = val;
+    },
+    visible(val) {
+      this.$emit('input', val);
+    }
   }
 }
 </script>
