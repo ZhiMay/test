@@ -347,6 +347,34 @@ end
 (byebug) @user.name
 "Example User"
 ```
+# 第 8 章 基本登录功能
+
+#### 1. Sessions 控制器
+
+会话和 Users 资源不同，Users 资源（通过 User 模型）使用数据库存储数据，而会话使用 cookie。所以，登录功能的大部分工作是实现基于 cookie 的身份验证机制。
+
+登录和退出功能由 Sessions 控制器中相应的 REST 动作处理：登录表单在 new 动作中处理（本节的内容），登录的过程是向 create 动作发送 POST 请求（8.2 节），退出则是向 destroy 动作发送 DELETE 请求（8.3 节）。（HTTP 请求与 REST 动作之间的对应关系参见表 7.1。）
+
+Users 资源使用特殊的 resources 方法自动获得 REST 式路由（代码清单 7.3），而 Sessions 资源则只能使用具名路由，处理发给 /login 地址的 GET 和 POST 请求，以及发给 /logout 地址的 DELETE 请求，如代码清单 8.2 所示（删除了 rails generate controller 生成的无用路由）。
+
+```
+ rails generate controller Sessions new
+```
+
+```
+=form_for(@user) do |f|
+
+end
+```
+
+登录表单和注册表单之间的主要区别是，会话不是模型，因此不能创建类似 @user 的变量。所以，构建登录表单时，我们要为 form_for 稍微多提供一些信息。form_for(@user) 的作用是让表单向 /users 发起 POST 请求。对会话来说，我们需要指明资源的名称以及相应的 URL：[2]
+
+```
+form_for(:session, url: login_path)
+```
+提交登录表单后会生成一个 params 散列，其中 params[:session][:email] 和 params[:session][:password] 分别对应电子邮件地址和密码字段。
+
+＊＊＊ 使用 render 方法）与redirect_to 的重定向不同，不算是一次新请求，
 
 
 

@@ -27,25 +27,44 @@
 ## pug api:
   https://pugjs.org/api/reference.html
 ## svn use:
+
   [svn 用法](https://www.codelast.com/%E5%8E%9F%E5%88%9B-linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8svn%E5%92%8Cgit%E7%9A%84%E4%B8%80%E4%BA%9B%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/)
+  
 ## markdown 文档
+
   [markdown 教程](http://www.jianshu.com/p/1e402922ee32/)
-  [javascript api](https://docs.microsoft.com/en-us/scripting/javascript/reference/reduce-method-array-javascript)
+
+  [javascript api](https://docs.microsoft.com/en-us/
+  scripting/javascript/reference/reduce-method-array-javascript)
+
 ## vw 和 vh 单位
 [纯CSS3使用vw和vh视口单位实现自适应](http://caibaojian.com/vw-vh.html)
 [CSS中如何使用视窗单位](https://www.w3cplus.com/css/simplify-your-stylesheets-with-the-magical-css-viewport-units.html)
 [前端开发博客](http://caibaojian.com/fe-daily-20170823.html)
 ## vue
+
 [使用Vue.js和Axios从第三方API获取数据](http://caibaojian.com/fetching-data-with-vue-js.html)
+
 [查看在线的版本 here](http://vuejs-news.herokuapp.com/)
+
 [sitepoint-editors/vuejs-news 源码](https://github.com/sitepoint-editors/vuejs-news/blob/master/index.html)
+
 [一个高度可定制的vue modal插件](https://github.com/shaodahong/dahong/issues/10)
+
 [组件分享好用的 Vue Component for Highcharts](https://juejin.im/entry/58f9c515570c350058cc10e8?utm_medium=hao.caibaojian.com&utm_source=hao.caibaojian.com)
+
 [不容错过的 Vue2.0 组件开发](http://hao.caibaojian.com/29008.html)
+
+[Vue2 利用 v-model 实现组件props双向绑定的优美解决方案](https://segmentfault.com/a/1190000008662112)
+
 ## casperJs
+
 [casperJs](http://casperjs.org/)
+
 [ css3中单位px,em,rem,vh,vw,vmin,vmax的区别及浏览器支持情况](http://blog.csdn.net/jyy_12/article/details/42557241)
+
 [浏览器内核趣闻](http://www.jianshu.com/p/94abc5f88e11)
+
 [Chrome 网页调试技巧](http://www.jianshu.com/p/2a3e3f0b562b)
 
 link[https://www.lynda.com/
@@ -59,5 +78,7 @@ http://codepen.io/]
 微信开发搭建服务器  
 
 [微信本地开发环境搭建](http://www.jianshu.com/p/3dea103e9579)
+
+http://t.beta.saybot.net/axt/t/awj_feedbacks/new_unit_feedback?passport_ids_s=49122892,60646592,31667222,47455701,58756755,20531505,36110565,57866600,84125123,55361743,63459266,28098489,49482666,83072230,40892188,54707585,16044036,34844016,78650431,23936574,96304540,38030259,10985656,69051451,94214722,58833298,39370317,73753966,49932604,25082457,43945851,78061472,68789703&awjcls_lesson_id=4560
 
 
