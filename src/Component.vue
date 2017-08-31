@@ -3,19 +3,26 @@
     <div class="timer-clock">
       <p class="title">你的操作过于频繁，请稍后重试！</p>
       <div class="time-num">{{leftime}}s</div>
+      <button class="timer-close" v-show="closable" @click="close">
+        <slot name="close">
+          Close
+        </slot>
+      </button>
     </div>
   </div>
 </template>
 <script>
 export default {
-  props: ["timeCount", "value"],
+  name: 'timerLock',
+  props: ["timeCount", "value","closable"],
   data() {
     return {
       initTime: 60,
-      leftime: "60",
+      leftime: this.timeCount,
       flag: false,
       count: 0,
-      visible: false
+      visible: false,
+      intervalid: 1
     }
   },
   methods: {
@@ -37,26 +44,45 @@ export default {
       } else {
         return `0${time}`
       }
+    },
+    close() {
+      this.visible = false;
+      clearInterval(this.intervalid);
+    },
+    runTimer() {
+      console.log("start run time");
+      console.log("initTime:" + this.initTime);
+      console.log("leftime:" + this.leftime);
+      let _this = this;
+      if (_this.value) {
+        _this.visible = true;
+        _this.flag = false;
+        _this.initTime = _this.timeCount;
+        _this.intervalid = setInterval(function() {
+          if (_this.flag == true) {
+            clearInterval(_this.intervalid);
+          } else {
+            _this.timeDown(_this);
+          }
+        }, 1000);
+      } else {
+        _this.visible = false;
+        _this.flag = true;
+        //关闭时数据归置
+        _this.count = 0;
+        _this.initTime = _this.timeCount;
+        _this.leftime = _this.initTime;
+      }
     }
   },
   mounted() {
-    let _this = this;
-    if (_this.value) {
-      _this.visible = true;
-    }
-    _this.initTime = _this.timeCount;
-    let time = setInterval(function() {
-      if (_this.flag == true) {
-        clearInterval(time);
-      } else {
-        _this.timeDown(_this);
-      }
-    }, 1000);
+    this.runTimer();
   },
   watch: {
     value(val) {
-      console.log(val);
+      console.log("val:" + val);
       this.visible = val;
+      this.runTimer();
     },
     visible(val) {
       this.$emit('input', val);
@@ -73,8 +99,13 @@ body {
 #timer-mask {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
+  z-index: 1000;
   width: 100%;
   height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   .timer-clock {
     font-family: "PingFangSC-Regular";
     background-color: #fff;
@@ -94,6 +125,18 @@ body {
   }
   .time-num {
     font-size: 48px;
+  }
+  .timer-close {
+    margin-right: 10px;
+    color: #fff;
+    bottom: 11px;
+    right: 10px;
+    position: absolute;
+    background-color: #2d8cf0;
+    border-color: #2d8cf0;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
   }
 }
 </style>
