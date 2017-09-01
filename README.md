@@ -53,7 +53,7 @@ npm run build
 *   data需要配置参数 timeCount，showTimerlock，closable 
 *   通过改变 this.showTimerlock 的状态，控制组件
 
-####  use for html
+#### 2. use for html
 
 ```
 <!DOCTYPE html>
