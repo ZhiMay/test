@@ -1,109 +1,114 @@
 (function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("vue"));
-	else if(typeof define === 'function' && define.amd)
-		define("timer-lock", ["vue"], factory);
-	else if(typeof exports === 'object')
-		exports["timer-lock"] = factory(require("vue"));
-	else
-		root["timer-lock"] = factory(root["Vue"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
+  if(typeof exports === 'object' && typeof module === 'object')
+    module.exports = factory(require("vue"));
+  else if(typeof define === 'function' && define.amd)
+    define("timer", ["vue"], factory);
+  else if(typeof exports === 'object')
+    exports["timer"] = factory(require("vue"));
+  else
+    root["timer"] = factory(root["Vue"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__) {
 return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/  // The module cache
+/******/  var installedModules = {};
 /******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
+/******/  // The require function
+/******/  function __webpack_require__(moduleId) {
 /******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
+/******/    // Check if module is in cache
+/******/    if(installedModules[moduleId]) {
+/******/      return installedModules[moduleId].exports;
+/******/    }
+/******/    // Create a new module (and put it into the cache)
+/******/    var module = installedModules[moduleId] = {
+/******/      i: moduleId,
+/******/      l: false,
+/******/      exports: {}
+/******/    };
 /******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/    // Execute the module function
+/******/    modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
+/******/    // Flag the module as loaded
+/******/    module.l = true;
 /******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
+/******/    // Return the exports of the module
+/******/    return module.exports;
+/******/  }
 /******/
 /******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
+/******/  // expose the modules object (__webpack_modules__)
+/******/  __webpack_require__.m = modules;
 /******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
+/******/  // expose the module cache
+/******/  __webpack_require__.c = installedModules;
 /******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/  // identity function for calling harmony imports with the correct context
+/******/  __webpack_require__.i = function(value) { return value; };
 /******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
+/******/  // define getter function for harmony exports
+/******/  __webpack_require__.d = function(exports, name, getter) {
+/******/    if(!__webpack_require__.o(exports, name)) {
+/******/      Object.defineProperty(exports, name, {
+/******/        configurable: false,
+/******/        enumerable: true,
+/******/        get: getter
+/******/      });
+/******/    }
+/******/  };
 /******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
+/******/  // getDefaultExport function for compatibility with non-harmony modules
+/******/  __webpack_require__.n = function(module) {
+/******/    var getter = module && module.__esModule ?
+/******/      function getDefault() { return module['default']; } :
+/******/      function getModuleExports() { return module; };
+/******/    __webpack_require__.d(getter, 'a', getter);
+/******/    return getter;
+/******/  };
 /******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/  // Object.prototype.hasOwnProperty.call
+/******/  __webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/dist/";
+/******/  // __webpack_public_path__
+/******/  __webpack_require__.p = "/dist/";
 /******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/  // Load entry module and return exports
+/******/  return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-function injectStyle (ssrContext) {
-  __webpack_require__(8)
-}
-var Component = __webpack_require__(6)(
-  /* script */
-  __webpack_require__(2),
-  /* template */
-  __webpack_require__(7),
-  /* styles */
-  injectStyle,
-  /* scopeId */
-  "data-v-ba3d0ab8",
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
+module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _vue = __webpack_require__(0);
+
+var _vue2 = _interopRequireDefault(_vue);
+
+var _timer = __webpack_require__(6);
+
+var _timer2 = _interopRequireDefault(_timer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Timer = {
+  install: function install() {
+    _vue2.default.component("timer", _timer2.default);
+  }
+};
+exports.default = Timer;
 
 /***/ }),
 /* 2 */
@@ -123,6 +128,7 @@ exports.default = {
       initTime: 60,
       leftime: this.timeCount,
       flag: false,
+      count: 0,
       visible: false,
       intervalid: 1
     };
@@ -130,6 +136,8 @@ exports.default = {
 
   methods: {
     timeDown: function timeDown(_this) {
+      _this.count++;
+      console.log("count:" + _this.count);
       _this.initTime--;
       var leftime = _this.initTime;
       if (leftime <= 0) {
@@ -139,6 +147,7 @@ exports.default = {
       _this.leftime = leftime;
     },
     format: function format(time) {
+      console.log("format-time:" + time);
       if (time >= 10) {
         return time;
       } else {
@@ -150,6 +159,9 @@ exports.default = {
       clearInterval(this.intervalid);
     },
     runTimer: function runTimer() {
+      console.log("start run time");
+      console.log("initTime:" + this.initTime);
+      console.log("leftime:" + this.leftime);
       var _this = this;
       if (_this.value) {
         _this.visible = true;
@@ -166,6 +178,7 @@ exports.default = {
         _this.visible = false;
         _this.flag = true;
 
+        _this.count = 0;
         _this.initTime = _this.timeCount;
         _this.leftime = _this.initTime;
       }
@@ -177,6 +190,7 @@ exports.default = {
 
   watch: {
     value: function value(val) {
+      console.log("val:" + val);
       this.visible = val;
       this.runTimer();
     },
@@ -193,17 +207,17 @@ exports.default = {
 "use strict";
 
 
-var _vue = __webpack_require__(1);
+var _vue = __webpack_require__(0);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _Component = __webpack_require__(0);
+var _index = __webpack_require__(1);
 
-var _Component2 = _interopRequireDefault(_Component);
+var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-module.exports = _Component2.default;
+module.exports = _index2.default;
 
 /***/ }),
 /* 4 */
@@ -214,7 +228,7 @@ exports = module.exports = __webpack_require__(5)();
 
 
 // module
-exports.push([module.i, "\nbody[data-v-ba3d0ab8] {\n  margin: 0;\n  padding: 0;\n}\n#timer-mask[data-v-ba3d0ab8] {\n  background-color: rgba(0, 0, 0, 0.5);\n  position: fixed;\n  z-index: 1000;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n}\n#timer-mask .timer-clock[data-v-ba3d0ab8] {\n    font-family: \"PingFangSC-Regular\";\n    background-color: #fff;\n    width: 426px;\n    height: 208px;\n    position: absolute;\n    left: 50%;\n    top: 50%;\n    margin-left: -213px;\n    margin-top: -104px;\n    text-align: center;\n    color: #4A4A4A;\n}\n#timer-mask .title[data-v-ba3d0ab8] {\n    font-size: 14px;\n    margin-top: 36px;\n}\n#timer-mask .time-num[data-v-ba3d0ab8] {\n    font-size: 48px;\n}\n#timer-mask .timer-close[data-v-ba3d0ab8] {\n    margin-right: 10px;\n    color: #fff;\n    bottom: 11px;\n    right: 10px;\n    position: absolute;\n    background-color: #2d8cf0;\n    border-color: #2d8cf0;\n    border: none;\n    cursor: pointer;\n    font-size: 18px;\n}\n", ""]);
+exports.push([module.i, "\nbody[data-v-40538822] {\n  margin: 0;\n  padding: 0;\n}\n#timer-mask[data-v-40538822] {\n  background-color: rgba(0, 0, 0, 0.5);\n  position: fixed;\n  z-index: 1000;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n}\n#timer-mask .timer-clock[data-v-40538822] {\n    font-family: \"PingFangSC-Regular\";\n    background-color: #fff;\n    width: 426px;\n    height: 208px;\n    position: absolute;\n    left: 50%;\n    top: 50%;\n    margin-left: -213px;\n    margin-top: -104px;\n    text-align: center;\n    color: #4A4A4A;\n}\n#timer-mask .title[data-v-40538822] {\n    font-size: 14px;\n    margin-top: 36px;\n}\n#timer-mask .time-num[data-v-40538822] {\n    font-size: 48px;\n}\n#timer-mask .timer-close[data-v-40538822] {\n    margin-right: 10px;\n    color: #fff;\n    bottom: 11px;\n    right: 10px;\n    position: absolute;\n    background-color: #2d8cf0;\n    border-color: #2d8cf0;\n    border: none;\n    cursor: pointer;\n    font-size: 18px;\n}\n", ""]);
 
 // exports
 
@@ -224,59 +238,82 @@ exports.push([module.i, "\nbody[data-v-ba3d0ab8] {\n  margin: 0;\n  padding: 0;\
 /***/ (function(module, exports) {
 
 /*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
 */
 // css base code, injected by the css-loader
 module.exports = function() {
-	var list = [];
+  var list = [];
 
-	// return the list of modules as css string
-	list.toString = function toString() {
-		var result = [];
-		for(var i = 0; i < this.length; i++) {
-			var item = this[i];
-			if(item[2]) {
-				result.push("@media " + item[2] + "{" + item[1] + "}");
-			} else {
-				result.push(item[1]);
-			}
-		}
-		return result.join("");
-	};
+  // return the list of modules as css string
+  list.toString = function toString() {
+    var result = [];
+    for(var i = 0; i < this.length; i++) {
+      var item = this[i];
+      if(item[2]) {
+        result.push("@media " + item[2] + "{" + item[1] + "}");
+      } else {
+        result.push(item[1]);
+      }
+    }
+    return result.join("");
+  };
 
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
+  // import a list of modules into the list
+  list.i = function(modules, mediaQuery) {
+    if(typeof modules === "string")
+      modules = [[null, modules, ""]];
+    var alreadyImportedModules = {};
+    for(var i = 0; i < this.length; i++) {
+      var id = this[i][0];
+      if(typeof id === "number")
+        alreadyImportedModules[id] = true;
+    }
+    for(i = 0; i < modules.length; i++) {
+      var item = modules[i];
+      // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      //  when a module is imported multiple times with different media queries.
+      //  I hope this will never occur (Hey this way we have smaller bundles)
+      if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+        if(mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if(mediaQuery) {
+          item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+        }
+        list.push(item);
+      }
+    }
+  };
+  return list;
 };
 
 
 /***/ }),
 /* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+function injectStyle (ssrContext) {
+  __webpack_require__(9)
+}
+var Component = __webpack_require__(7)(
+  /* script */
+  __webpack_require__(2),
+  /* template */
+  __webpack_require__(8),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-40538822",
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -373,7 +410,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -409,7 +446,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -419,10 +456,10 @@ var content = __webpack_require__(4);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(9)("1affb41b", content, true);
+var update = __webpack_require__(10)("0f07fff8", content, true);
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -441,7 +478,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(10)
+var listToStyles = __webpack_require__(11)
 
 /*
 type StyleObject = {
@@ -643,7 +680,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 /**
