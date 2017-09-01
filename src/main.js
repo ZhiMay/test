@@ -17,7 +17,7 @@ App 的内容
 //     return {
 //       timeCount: 100,//设定计时的秒数
 //       showTimerlock: true,//是否显示Timerlock组件，自定义，是为true
-//       closable: false//是否显示关闭按钮，是为true
+//       closable: true//是否显示关闭按钮，是为true
 //     }
 //   },
 //   template:"<div><button @click='stop'>停止</button><button @click='start'>重启</button><App :timeCount='timeCount' v-model='showTimerlock' :closable='closable'><span slot='close'>关闭</span></App></div>",

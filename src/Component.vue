@@ -20,15 +20,12 @@ export default {
       initTime: 60,
       leftime: this.timeCount,
       flag: false,
-      count: 0,
       visible: false,
       intervalid: 1
     }
   },
   methods: {
     timeDown(_this) {
-      _this.count++;
-      console.log("count:" + _this.count);
       _this.initTime--;
       let leftime = _this.initTime;
       if (leftime <= 0) {
@@ -38,7 +35,6 @@ export default {
       _this.leftime = leftime;
     },
     format(time) {
-      console.log("format-time:" + time);
       if (time >= 10) {
         return time
       } else {
@@ -50,9 +46,6 @@ export default {
       clearInterval(this.intervalid);
     },
     runTimer() {
-      console.log("start run time");
-      console.log("initTime:" + this.initTime);
-      console.log("leftime:" + this.leftime);
       let _this = this;
       if (_this.value) {
         _this.visible = true;
@@ -69,7 +62,6 @@ export default {
         _this.visible = false;
         _this.flag = true;
         //关闭时数据归置
-        _this.count = 0;
         _this.initTime = _this.timeCount;
         _this.leftime = _this.initTime;
       }
@@ -80,7 +72,6 @@ export default {
   },
   watch: {
     value(val) {
-      console.log("val:" + val);
       this.visible = val;
       this.runTimer();
     },
