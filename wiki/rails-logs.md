@@ -369,12 +369,41 @@ end
 
 登录表单和注册表单之间的主要区别是，会话不是模型，因此不能创建类似 @user 的变量。所以，构建登录表单时，我们要为 form_for 稍微多提供一些信息。form_for(@user) 的作用是让表单向 /users 发起 POST 请求。对会话来说，我们需要指明资源的名称以及相应的 URL：[2]
 
+
 ```
 form_for(:session, url: login_path)
 ```
 提交登录表单后会生成一个 params 散列，其中 params[:session][:email] 和 params[:session][:password] 分别对应电子邮件地址和密码字段。
 
 ＊＊＊ 使用 render 方法）与redirect_to 的重定向不同，不算是一次新请求，
+
+**  User.find(session[:user_id]) 与 User.find_by(id: session[:user_id])，如果用户 ID 不存在，find 方法会抛出异常。在用户的资料页面可以使用这种行为，因为必须有相应的用户才能显示他的信息。但 session[:user_id] 的值经常是 nil（表示用户未登录），所以我们要使用 create 动作中通过电子邮件地址查找用户的 find_by 方法，通过 id 查找用户：User.find_by(id: session[:user_id])，如果 ID 无效，find_by 方法返回 nil，而不会抛出异常。因此，我们可以按照下面的方式定义 current_user 方法：
+
+```
+def current_user
+  User.find_by(id: session[:user_id])
+end
+```
+
+* = link_to "Profile", current_user
+
+* = link_to "Profile", user_path(current_user)
+
+我们可以直接链接到用户对象，Rails 会自动把 current_user 转换成 user_path(current_user)
+
+#### 2.在 application.js 中引入 Bootstrap JavaScript 库
+app/assets/javascripts/application.js
+
+```
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap
+//= require turbolinks
+//= require_tree .
+```
+
+
+
 
 
 

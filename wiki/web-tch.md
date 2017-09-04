@@ -59,6 +59,8 @@
 
 [vue 常用ui组件](http://blog.csdn.net/zgrkaka/article/details/53897202)
 
+[Vue相关开源项目库汇总](https://github.com/opendigg/awesome-github-vue#Demo%E7%A4%BA%E4%BE%8B)
+
 [demo1](https://github.com/xiaotuni/vue2-demo)
 
 [demo2](https://github.com/halfrost/vue-objccn)
@@ -93,6 +95,8 @@ http://css-weekly.com/
 http://javascriptweekly.com/
 
 http://codepen.io/]
+
+[How To Publish Your Vue.js Component On NPM](https://vuejsdevelopers.com/2017/07/31/vue-component-publish-npm/)
 
 微信开发搭建服务器  
 
