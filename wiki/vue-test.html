@@ -30,11 +30,12 @@
   <br/>
   <br/>
    <a href="http://blog.csdn.net/yangbingbinga/article/details/61914312">v-model 的原理</a> -->
-   <button @click='stop'>停止</button><button @click='start'>重启</button>
-   <timer v-bind:time-count='timeCount' v-model='showTimerlock' :closable='closable'>
+   <!-- <button @click='stop'>停止</button><button @click='start'>重启</button> -->
+   <!-- <timer v-bind:time-count='timeCount' v-model='showTimerlock' :closable='closable'>
      <span slot='close'>关闭</span>
-   </timer>
+   </timer> -->
 </div>
+<div id="vm1" >{{data}}</div>
 </body>
 <script type="text/javascript">
 //   var app = new Vue({
@@ -47,24 +48,51 @@
 //     something: "121dasdad"
 //   }
 // })
-Vue.use(timer);
-new Vue({
-  el:'#app',
-  data(){
-    return {
-      timeCount: 60,//设定计时的秒数
-      showTimerlock: true,//是否显示Timerlock组件，自定义，是为true
-      closable: true//是否显示关闭按钮，是为true
-    }
-  },
-  methods:{
-    stop(){
-      this.showTimerlock=false;
-    },
-    start(){
-      this.showTimerlock=true;
-    }
-  }
-})
+// Vue.use(timer);
+// new Vue({
+//   el:'#app',
+//   data(){
+//     return {
+//       timeCount: 60,//设定计时的秒数
+//       showTimerlock: true,//是否显示Timerlock组件，自定义，是为true
+//       closable: true//是否显示关闭按钮，是为true
+//     }
+//   },
+//   methods:{
+//     stop(){
+//       this.showTimerlock=false;
+//     },
+//     start(){
+//       this.showTimerlock=true;
+//     }
+//   }
+// })
+var vmData = {
+    name:"vmData",
+    a:"999",
+    data:"this is data"
+};
+
+var log = function(msg){
+    console.log(msg);
+};
+
+var vm = new Vue(
+{
+    el:"#vm1",
+    data:vmData,
+    beforeCreate:function(){log("beforeCreate")},
+    created:function(){log("created")},
+    beforeMount:function(){log("beforeMount")},
+    mounted:function(){log("mounted")},
+    beforeUpdate:function(){log("beofreUpdate")},
+    updated:function(){log("updated")},
+    beforeDestroy:function(){log("beforeDestroy")},
+    destroyed:function(){log("destroyed")}
+});
+vmData.b = "998";
+vm.$watch("a",function(oldVal,newVal){
+    console.log("oldVal:" + oldVal + ";newVal:" +newVal);
+});
 </script>
 </html>

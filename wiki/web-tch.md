@@ -68,7 +68,11 @@
 [9个超赞的视觉效果](http://www.zcfy.cc/article/html-css-and-javascript-10-awesome-codepens-to-inspire-you-4101.html?t=new)
 
 [什么？页面卡顿？操作慢？](https://juejin.im/entry/59a67ef06fb9a024903aba71?utm_source=weixinqun&utm_medium=fe)
+[Vue 生命周期](http://www.imooc.com/article/16117)
 
+[Tips on axios](http://www.jianshu.com/p/e1525c0ec159)
+
+[关于Vue实例的生命周期created和mounted的区别](https://segmentfault.com/a/1190000008570622)
 1.面试的妹纸问我：web缓存设置不是后台的事情吗？
 http://t.cn/RNqxgSR
 
@@ -104,4 +108,69 @@ http://codepen.io/]
 
 http://t.beta.saybot.net/axt/t/awj_feedbacks/new_unit_feedback?passport_ids_s=49122892,60646592,31667222,47455701,58756755,20531505,36110565,57866600,84125123,55361743,63459266,28098489,49482666,83072230,40892188,54707585,16044036,34844016,78650431,23936574,96304540,38030259,10985656,69051451,94214722,58833298,39370317,73753966,49932604,25082457,43945851,78061472,68789703&awjcls_lesson_id=4560
 
+
+## es6
+
+[es6 class](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes)
+[es6 class](https://wohugb.gitbooks.io/ecmascript-6/content/docs/class.html)
+
+## webpack
+[webpack multi](http://www.cnblogs.com/sloong/p/5689162.html)
+[分离css单独打包](http://www.jianshu.com/p/439764e3eff2)
+
+[vscode](https://jingyan.baidu.com/article/2f9b480d890faa41cb6cc208.html)
+
+[vscode 插件](https://github.com/varHarrie/Dawn-Blossoms/issues/10)
+
+https://peachscript.github.io/vue-infinite-loading/#!/getting-started/basic
+
+
+import moment from 'moment';
+import _ from 'underscore';
+import HomeworkItem from "./homework.js";
+class HomeworkList {
+  constructor(array) {
+    this.list = array;
+  }
+  get value() {
+    return this.list;
+  }
+  set value(val) {
+    this.list = val;
+  }
+  formatList() {
+    this.list = this.list.map(function(item) {
+      let homeworkItem = new HomeworkItem(item);
+      let homework = homeworkItem.format();
+      return item = homework;
+    });
+    console.log("this.list ...");
+    return this.list;
+  }
+  inOrderList() {
+    console.log(this.list);
+  }
+  invertedList() {
+    console.log("sfafdfsdfaf");
+  }
+  groupByMonth() {
+    let resgroup = _.groupBy(this.list, function(item) {
+      return item.timecate;
+    });
+    let groupArr = [];
+    //let keys = Object.keys(resgroup);
+    _.each(resgroup, function(value, key) {
+      let homework = {};
+      homework.timecate = key;
+      homework.month = value[0].month;
+      homework.record = value;
+      groupArr.push(homework);
+      // console.log(key);
+      // console.log(value);
+    })
+    this.list = groupArr;
+    return groupArr;
+  }
+}
+export default HomeworkList;
 
