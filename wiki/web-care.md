@@ -1,5 +1,6 @@
 1.使用 a.btn(href="//www.alo7.com/") 根据当前schema变化
-
+   "mint-ui": "^2.2.9",
+    "vue": "^2.4.2",
 https://github.com/mattermost/desktop/releases
 
 https://github.com/luozhihua/sublime-vue-formatter
