@@ -24,3 +24,6 @@ svn add . --no-ignore --force
 
 ## npm 
   nrm add vuenpm http://192.168.1.108:4873
+
+## vue cli
+vue init webpack  ranking-list

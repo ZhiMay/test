@@ -174,3 +174,21 @@ class HomeworkList {
 }
 export default HomeworkList;
 
+
+
+
+
+
+[]http://blog.csdn.net/kameleon2013/article/details/53812446
+
+http://www.cnblogs.com/xxcanghai/p/6382607.html
+
+[父组件异步数据传给子组件](http://www.jb51.net/article/117447.htm)
+
+[父组件异步数据传给子组件2](http://www.jianshu.com/p/ddf876a9eb07)
+
+[vue demo](https://github.com/hzzly/xyy-vue)
+
+
+
+
