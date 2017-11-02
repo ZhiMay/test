@@ -1,0 +1,75 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>用vue封装自定义组件</title>  
+    <script src = "https://unpkg.com/vue@2.2.6/dist/vue.js"></script> 
+</head>  
+<body>  
+<!-- 模板 -->  
+   <span style="font-size:14px;"><div id="app">  
+    <div class="fl">  
+        <h2>自定义的下拉框</h2>  
+        <custom-select btn-value="查询" v-bind:list="list1"></custom-select>  
+    </div>  
+  
+    <div class="fl">  
+        <h2>第二个下拉框</h2>  
+        <custom-select btn-value="go" v-bind:list="list2"></custom-select>  
+    </div>  
+</div></span>   
+  
+<script>  
+//数据  
+Vue.component( "custom-select",{         //可小驼峰可烤串  
+        data:function(){                     //data为function,返回私有对象  
+            return {  
+                selectShow:false,  
+                val:''  
+            };  
+        },  
+        props:["btnValue",'list'],                  //此处必须(小)驼峰  
+       template:`<section class="list">  
+            <div class="searchIpt">  
+            <div class="clearFix">  
+            <input type="text" @click="selectShow = !selectShow" :value="val">  
+            <input type="button" v-bind:value="btnValue">  
+            <span></span>  
+            </div>  
+            <custom-list v-show="selectShow" v-bind:aaa="list" v-on:receive="changeValueHandle"  
+            ></custom-list>  
+            </div>  
+            </section>`,  
+        methods:{  
+            changeValueHandle(item){  
+                this.val=item;    //需要this  
+            }  
+        }  
+  
+    })  
+    Vue.component('custom-list',{  
+        props:["aaa"],                        //传自定义属性名  
+        template:`<ul>  
+               <li v-for="item of aaa" @click="selectValueHandle(item)">{{item}}</li>  
+            </ul>`,  
+        methods:{  
+            selectValueHandle(item){  
+                this.$emit('receive',item)   //$emit告诉父级发生的（自定义）事件，v-on在父组件绑定（自定义）事件  
+            }  
+        }  
+    })  
+    var data = {  
+        list1:['吃饭','睡觉','剁手'],  
+        list2:['111','123','233']  
+    }  
+    new Vue({  
+       el:'#app',  
+        data:data/* { 
+            list1:['吃饭','睡觉','剁手'], 
+            list2:['111','123','233'] 
+        }*/  
+    })
+  
+</script>  
+</body>  
+</html>  
