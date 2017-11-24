@@ -125,60 +125,6 @@ http://t.beta.saybot.net/axt/t/awj_feedbacks/new_unit_feedback?passport_ids_s=49
 https://peachscript.github.io/vue-infinite-loading/#!/getting-started/basic
 
 
-import moment from 'moment';
-import _ from 'underscore';
-import HomeworkItem from "./homework.js";
-class HomeworkList {
-  constructor(array) {
-    this.list = array;
-  }
-  get value() {
-    return this.list;
-  }
-  set value(val) {
-    this.list = val;
-  }
-  formatList() {
-    this.list = this.list.map(function(item) {
-      let homeworkItem = new HomeworkItem(item);
-      let homework = homeworkItem.format();
-      return item = homework;
-    });
-    console.log("this.list ...");
-    return this.list;
-  }
-  inOrderList() {
-    console.log(this.list);
-  }
-  invertedList() {
-    console.log("sfafdfsdfaf");
-  }
-  groupByMonth() {
-    let resgroup = _.groupBy(this.list, function(item) {
-      return item.timecate;
-    });
-    let groupArr = [];
-    //let keys = Object.keys(resgroup);
-    _.each(resgroup, function(value, key) {
-      let homework = {};
-      homework.timecate = key;
-      homework.month = value[0].month;
-      homework.record = value;
-      groupArr.push(homework);
-      // console.log(key);
-      // console.log(value);
-    })
-    this.list = groupArr;
-    return groupArr;
-  }
-}
-export default HomeworkList;
-
-
-
-
-
-
 []http://blog.csdn.net/kameleon2013/article/details/53812446
 
 http://www.cnblogs.com/xxcanghai/p/6382607.html
@@ -188,6 +134,18 @@ http://www.cnblogs.com/xxcanghai/p/6382607.html
 [父组件异步数据传给子组件2](http://www.jianshu.com/p/ddf876a9eb07)
 
 [vue demo](https://github.com/hzzly/xyy-vue)
+
+[回调函数](http://www.html-js.com/article/Sexy-Javascript-understand-the-callback-function-with-the-use-of-Javascript-in)
+[回调函数](https://www.cnblogs.com/snandy/p/3704218.html
+[vue 异步加载](http://blog.csdn.net/lucky_lxg/article/details/67638115)
+[VUE 从详情页返回列表页，如何保留列表页的状态](http://cnodejs.org/topic/590c47ae3504ce1c2ac458cb)
+[vue 路由](https://www.cnblogs.com/SamWeb/p/6610733.html)
+[Vue 2.0 制作列表组件，实现分页、搜索、批量操作等](http://blog.csdn.net/sinat_17775997/article/details/54943822)
+[如何让图片按比例响应式缩放、并自动裁剪的css技巧](http://blog.csdn.net/oulihong123/article/details/54601030)
+[js 无限加载](https://www.cnblogs.com/w-wanglei/p/5863387.html)
+[vue 生命周期](http://aicoder.com/vue/preview/all.html)
+[根据分辨率设计网页](http://www.cnblogs.com/lyzg/p/4877277.html)
+[移动端的常识](http://www.cnblogs.com/PeunZhang/p/3407453.html)
 
 
 
