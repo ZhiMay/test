@@ -1,15 +1,7 @@
 1.使用 a.btn(href="//www.alo7.com/") 根据当前schema变化
-   "mint-ui": "^2.2.9",
-    "vue": "^2.4.2",
-https://github.com/mattermost/desktop/releases
+[mattermost](https://github.com/mattermost/desktop/releases)
 
-https://github.com/luozhihua/sublime-vue-formatter
-
-.shadow{
-  color: #fff;
-  text-shadow: 3px 3px 3px #000;
-}
-
+[sublime vue format](https://github.com/luozhihua/sublime-vue-formatter)
 mint-ui 
 http://blog.csdn.net/iohboel/article/details/75228390
 
@@ -28,3 +20,11 @@ https://github.com/yxl/opencore-amr-js
 []
 [设备像素比devicePixelRatio简单介绍](http://www.zhangxinxu.com/wordpress/2012/08/window-devicepixelratio/)
 [设备像素比devicePixelRatio简单介绍](http://blog.csdn.net/huanmeng122/article/details/47861693)
+[vue截图](http://xyxiao.cn/vue-cropper/example/)
+[IOS设备列表](https://zh.wikipedia.org/wiki/IOS%E8%AE%BE%E5%A4%87%E5%88%97%E8%A1%A8)
+[Web移动端Fixed布局的解决方案](http://efe.baidu.com/blog/mobile-fixed-layout/)
+[web fixed 问题](http://www.zhangyunling.com/684.html)
+[node-webkit](http://www.cnblogs.com/xuanhun/p/3670906.html)
+[css loadding 效果](http://www.jianshu.com/p/6ac3e3e12d61)
+[WEB标准系列 HTML元素嵌套](http://www.it165.net/design/html/201306/2104.html)
+[手机端页面自适应解决方案—rem布局](http://www.jianshu.com/p/b00cd3506782)

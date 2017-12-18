@@ -146,6 +146,12 @@ http://www.cnblogs.com/xxcanghai/p/6382607.html
 [vue 生命周期](http://aicoder.com/vue/preview/all.html)
 [根据分辨率设计网页](http://www.cnblogs.com/lyzg/p/4877277.html)
 [移动端的常识](http://www.cnblogs.com/PeunZhang/p/3407453.html)
+[Element分析（工具篇）——Popper](http://www.jianshu.com/p/859a75a98270)
+[微信在ios上旋转屏幕过程中的bug](http://www.jianshu.com/p/a5c7d084fe9c)
+[Vue.js自定义指令的用法与实例](https://www.cnblogs.com/kidney/p/6296304.html)
+[Vue.js自定义指令的用法与实例2](http://www.jianshu.com/p/c2bef47439ab)
+[vue 多页面](http://blog.csdn.net/Tank_in_the_street/article/details/73732801)
+[自定义组件](http://blog.csdn.net/Lucky_LXG/article/details/67634128)
 
 
 
