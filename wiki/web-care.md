@@ -27,4 +27,4 @@ https://github.com/yxl/opencore-amr-js
 [node-webkit](http://www.cnblogs.com/xuanhun/p/3670906.html)
 [css loadding 效果](http://www.jianshu.com/p/6ac3e3e12d61)
 [WEB标准系列 HTML元素嵌套](http://www.it165.net/design/html/201306/2104.html)
-[手机端页面自适应解决方案—rem布局](http://www.jianshu.com/p/b00cd3506782)
+[手机端页面自适应解决方案—rem布局](http://www.jianshu.com/p/985d26b40199)
