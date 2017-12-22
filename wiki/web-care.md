@@ -17,7 +17,6 @@ https://github.com/yxl/opencore-amr-js
 [移动端document点击事件无效解决方法2](http://www.shejicool.com/js/other/629.html)
 [点击图片放大](https://segmentfault.com/q/1010000007385226/a-1020000007389135)
 [点击图片放大2](http://www.111cn.net/wy/144928.htm)
-[]
 [设备像素比devicePixelRatio简单介绍](http://www.zhangxinxu.com/wordpress/2012/08/window-devicepixelratio/)
 [设备像素比devicePixelRatio简单介绍](http://blog.csdn.net/huanmeng122/article/details/47861693)
 [vue截图](http://xyxiao.cn/vue-cropper/example/)
@@ -28,3 +27,14 @@ https://github.com/yxl/opencore-amr-js
 [css loadding 效果](http://www.jianshu.com/p/6ac3e3e12d61)
 [WEB标准系列 HTML元素嵌套](http://www.it165.net/design/html/201306/2104.html)
 [手机端页面自适应解决方案—rem布局](http://www.jianshu.com/p/985d26b40199)
+[web 命名规范](https://segmentfault.com/a/1190000009935766)
+[为什么文件名要小写？](http://www.ruanyifeng.com/blog/2017/02/filename-should-be-lowercase.html)
+[eslint](https://www.cnblogs.com/hahazexia/p/6393212.html)
+[eslint 2](http://blog.csdn.net/violetjack0808/article/details/72620859)
+[vue 多页面开发](http://blog.csdn.net/Tank_in_the_street/article/details/73732801)
+[tab + 无限加载](http://www.sucaihuo.com/js/1940.html)
+[Vue2.0 多 Tab切换组件](http://blog.csdn.net/qq_16559905/article/details/73496926)
+[tab 互不影响](https://segmentfault.com/q/1010000011557565/)
+[vue从入门到放弃---axios 和 rap模拟数据](http://blog.csdn.net/flower46273736/article/details/73468645)
+[tab tabbar](http://blog.csdn.net/Lucky_LXG/article/details/67634128)
+

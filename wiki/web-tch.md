@@ -152,7 +152,3 @@ http://www.cnblogs.com/xxcanghai/p/6382607.html
 [Vue.js自定义指令的用法与实例2](http://www.jianshu.com/p/c2bef47439ab)
 [vue 多页面](http://blog.csdn.net/Tank_in_the_street/article/details/73732801)
 [自定义组件](http://blog.csdn.net/Lucky_LXG/article/details/67634128)
-
-
-
-
