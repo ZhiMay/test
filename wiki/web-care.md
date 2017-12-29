@@ -37,4 +37,6 @@ https://github.com/yxl/opencore-amr-js
 [tab 互不影响](https://segmentfault.com/q/1010000011557565/)
 [vue从入门到放弃---axios 和 rap模拟数据](http://blog.csdn.net/flower46273736/article/details/73468645)
 [tab tabbar](http://blog.csdn.net/Lucky_LXG/article/details/67634128)
+[photo-swipe 异步加载](https://www.zhangshengrong.com/p/v710xKE1Mp/)
+[手把手教你搭建微信小程序的本地测试服务器](https://www.jianshu.com/p/61f50ee77dec)
 
