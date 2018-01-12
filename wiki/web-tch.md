@@ -152,3 +152,19 @@ http://www.cnblogs.com/xxcanghai/p/6382607.html
 [Vue.js自定义指令的用法与实例2](http://www.jianshu.com/p/c2bef47439ab)
 [vue 多页面](http://blog.csdn.net/Tank_in_the_street/article/details/73732801)
 [自定义组件](http://blog.csdn.net/Lucky_LXG/article/details/67634128)
+
+## 文本替换
+```bash
+#全局替换
+grep -rl "著名" content | xargs sed -i "" 's/著名/知名/g'
+grep -rl "str1" dir | xargs sed -i 's/str2/str3/g'  
+#意思就是把dir路径下面，还有子文件夹里面的所有包含‘str1’的文件里的‘str2’替换为‘str3’
+
+当str1和str2相同时，就是批量查找和替换了
+#批量删除
+#http://blog.csdn.net/offbye/article/details/46438557
+find . -name "epps_q001_*" | xargs rm -r
+# 将  余额替换为剩余金额
+find . -name '*.vue' | xargs grep '余额' -rl | xargs sed -i '' "s/余额/剩余金额/g"
+```
+
