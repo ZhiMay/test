@@ -1,3 +1,4 @@
+腾讯地图的key: HAABZ-PIE3F-ZLZJM-NA5H4-WKST7-2YFJX
 1.使用 a.btn(href="//www.alo7.com/") 根据当前schema变化
 [mattermost](https://github.com/mattermost/desktop/releases)
 
@@ -51,4 +52,43 @@ https://github.com/yxl/opencore-amr-js
  [分享](http://blog.csdn.net/qq_31383345/article/details/53791595)
  [小程序心得](http://www.php.cn/xiaochengxu-361523.html)
  [小程序](https://segmentfault.com/a/1190000008975448?winzoom=1)
+ [省市](https://www.cnblogs.com/xjwy/p/6681867.html?utm_source=tuicool&utm_medium=referral)
+ [](https://segmentfault.com/a/1190000008975448?winzoom=1)
+ [小程序上传头像](https://www.jianshu.com/p/c4a2ecb050e9)
+
+[小程序的客服消息](https://www.cnblogs.com/xuzhengzong/p/7245285.html)
+[小程序消息推送](https://mp.weixin.qq.com/debug/wxadoc/dev/api/custommsg/callback_help.html)
+[小程序重复点击](https://www.jianshu.com/p/b27157ea61fb)
+[下程序自定义轮播](https://www.ctolib.com/sun-zw-swiper.html)
+
+http://als.saybot.net/app/kibana#/discover/eaa0c7a0-0d6a-11e8-9654-a182a721236c?_g=()&_a=(columns:!(_source),filters:!(),index:%5Bals-47dac907b67780efc629e211-%5DYYYY.MM.DD,interval:auto,query:(match_all:()),sort:!('@timestamp',desc))
+[正则](http://blog.csdn.net/SecondLieutenant/article/details/73457648)
+```
+// 要求数字，字母和下划线（至少包含其中两种，数字不能开头）
+var reg=/^(?![0-9]+$)(?![a-zA-Z]+$)[A-Za-z_][A-Za-z_0-9]{0,}$/
+```
+[上传头像的方式](http://www.voidcn.com/article/p-dglkmreq-bqd.html)
+[小程序截图](https://we-plugin.github.io/we-cropper/#/)
+[小程序截图2](https://github.com/soggotheslitherer/weCropper)
+[截图3](http://blog.csdn.net/liyanfei1992/article/details/65627221)
+```
+//用canvas压缩图片
+  const cc = wx.createCanvasContext('CCanvas');
+  cc.drawImage(src,0,0,255,255);
+  cc.draw();
+  cc.save();
+  wx.canvasToTempFilePath({
+    canvasId: 'CCanvas',
+    success(res) {
+      src=res.tempFilePath;
+      console.log(res.tempFilePath);
+    },
+    fail(info) {
+      console.log('ccerror');
+      console.log(info);
+    }
+  })
+  ```
+  [自定义省市区](https://www.jianshu.com/p/3040882e92cb)
+
 
