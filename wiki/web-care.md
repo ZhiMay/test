@@ -90,5 +90,10 @@ var reg=/^(?![0-9]+$)(?![a-zA-Z]+$)[A-Za-z_][A-Za-z_0-9]{0,}$/
   })
   ```
   [自定义省市区](https://www.jianshu.com/p/3040882e92cb)
+  [小程序全局数据回调](https://www.jianshu.com/p/aaf65625fc9d)
+  [小程序监控](https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=&docid=000eacb10fce90f5894627fea51c04)
+  [小程序的请求封装](http://blog.csdn.net/xiehuimx/article/details/73770033)
+  [小程序模板消息](https://www.jianshu.com/p/92ebdd5e233f)
+  [小程序模板消息2](http://www.wxapp-union.com/portal.php?mod=view&aid=2667)
 
 

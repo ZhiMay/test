@@ -12,3 +12,4 @@
 npm rm webpack-dev-server -D
 npm i webpack-dev-server@2.7.1 -D
 ```
+[jest test](https://deltice.github.io/jest/docs/zh-Hans/getting-started.html)

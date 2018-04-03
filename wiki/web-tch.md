@@ -1,3 +1,4 @@
+[css 布局](https://juejin.im/post/5aa252ac518825558001d5de?utm_medium=fe&utm_source=weixinqun)
 ## handlebars generate html: 
  https://github.com/patrickkettner/grunt-compile-handlebars
 
@@ -167,4 +168,6 @@ find . -name "epps_q001_*" | xargs rm -r
 # 将  余额替换为剩余金额
 find . -name '*.vue' | xargs grep '余额' -rl | xargs sed -i '' "s/余额/剩余金额/g"
 ```
-
+[小程序时尚商城wepy demo](https://github.com/dyq086/wxYuHanStore)
+[小程序自动索](http://www.xcxwo.com/component/view/8d639c1ba65c1c351174efb2fc2f9cb4)
+[js 自动搜索过滤demo](http://www.sucaihuo.com/js/1982.html)

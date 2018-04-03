@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>canvas</title>
+
+  <script type="text/javascript">
+    window.onload = function() {
+      createcanvas();
+      drawRect();
+      // drawImage();
+    }
+
+    function createcanvas() {
+      var CANVAS = document.getElementById('mycanvas');
+      context = CANVAS.getContext('2d');
+    }
+
+    function drawRect() {
+      // var grd = context.createLinearGradient(0, 0, 400, 0);
+      // grd.addColorStop(0, "#ff0000");
+      // grd.addColorStop(0.5, "magenta");
+      // grd.addColorStop(1, "#0000ff");
+      // context.font = "30px Verdana";
+      // context.strokeStyle = grd;
+      // context.lineWidth = 5;
+      // // context.strokeRect(20, 20, 150, 100);
+      // context.strokeText("Big smile!", 10, 50);
+      // context.shadowBlur = 10;
+      // context.shadowOffsetX = 20;
+      // context.shadowOffsetY = 10;
+      // context.shadowColor = "red";
+      // context.fillStyle = "blue";
+      // context.fillRect(20, 20, 100, 80);
+      // var grd = context.createRadialGradient(75, 50, 5, 90, 60, 100);
+      // grd.addColorStop(0, "red");
+      // grd.addColorStop(1, "white");
+
+      // // Fill with gradient
+      // context.fillStyle = grd;
+      // context.fillRect(10, 10, 150, 100);
+      // context.lineWidth = 10;
+      // // context.beginPath();
+      // // context.lineCap = "round";
+      // // context.lineJoin = "round";
+      // // context.moveTo(20, 20);
+      // // context.lineTo(100, 50);
+      // // context.lineTo(20, 100);
+      // // context.rect(20, 20, 150, 100);
+      // // context.stroke();
+      // context.strokeRect(20, 20, 150, 100);
+      // context.beginPath();
+      // context.lineWidth = "5";
+      // context.strokeStyle = "red"; // 红色路径
+      // context.moveTo(0, 75);
+      // context.lineTo(250, 75);
+      // context.stroke(); // 进行绘制
+
+      // context.beginPath();
+      // context.strokeStyle = "blue"; // 蓝色路径
+      // context.moveTo(50, 0);
+      // context.lineTo(150, 130);
+      // // 进行绘制
+      // context.arc(100, 75, 50, 0, 1 * Math.PI);
+      // context.stroke();
+      context.strokeStyle = "blue";
+      context.moveTo(150, 20);
+      context.lineTo(150, 170);
+      context.stroke();
+
+      context.font = "20px Arial";
+
+      // 显示不同的 textAlign 值
+      context.textAlign = "start";
+      context.strokeText("textAlign=start", 150, 60);
+      context.textAlign = "end";
+      context.strokeText("textAlign=end", 150, 80);
+      context.textAlign = "left";
+      context.strokeText("textAlign=left", 150, 100);
+      context.textAlign = "center";
+      context.strokeText("textAlign=center", 150, 120);
+      context.textAlign = "right";
+      context.strokeText("textAlign=right", 150, 140);
+
+    }
+
+    function cnvs_getCoordinates(e) {
+      x = e.clientX;
+      y = e.clientY;
+      document.getElementById("xycoordinates").innerHTML = "Coordinates: (" + x + "," + y + ")";
+    }
+
+    function drawImage() {
+      var img = new Image();
+      img.onload = function() {
+        // context.drawImage(img, 60, 0, 400, 200);
+        // context.clearRect(0, 0, c.width, c.height);
+        var pat = context.createPattern(img, 'repeat');
+        context.rect(0, 0, 400, 400);
+        context.fillStyle = pat;
+        context.fill();
+      }
+      img.src = "http://www.alo7.com/img/2016_site/shouye-ncore2.jpg";
+    }
+
+    function cnvs_clearCoordinates() {
+      document.getElementById("xycoordinates").innerHTML = "";
+    }
+  </script>
+</head>
+
+<body>
+  <canvas id="mycanvas" width="400" height="400">
+    <span>你的浏览器不支持canvas</span>
+  </canvas>
+  <div id="coordiv" style="float:left;width:199px;height:99px;border:1px solid #c3c3c3" onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"></div>
+  <div id="xycoordinates"></div>
+
+</body>
+
+</html>
