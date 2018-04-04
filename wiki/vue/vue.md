@@ -35,3 +35,5 @@ var childNode = {
 [iOS微信浏览器直接打开App](https://blog.csdn.net/hbjixieyuan/article/details/55048644)
 [iOS/Android 微信及浏览器中唤起本地APP](https://blog.csdn.net/gf771115/article/details/73177153)
 [点击微信分享链接打开App](https://www.jianshu.com/p/456455a5c081)
+[vue typescript](https://segmentfault.com/a/1190000011853167)
+sudo http-server -P http://tt.alo7.com:8080 -p 80 重定向端口
