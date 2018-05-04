@@ -39,3 +39,4 @@ var childNode = {
 [vuex typescript](https://codeburst.io/vuex-and-typescript-3427ba78cfa8)
 [vuex typescript2](https://segmentfault.com/a/1190000011864013)
 sudo http-server -P http://tt.alo7.com:8080 -p 80 重定向端口
+[vue bus](https://www.cnblogs.com/fanlinqiang/p/7756566.html)
