@@ -1,5 +1,5 @@
 # vue 开源项目
-
+1.[vue-cli build打包后CSS浏览器兼容前缀自动去除的问题](http://www.zhuyuwei.cn/2018/vue-cli-css-prefixer.html)
 1. [vue-cli-multipage多页面脚手架](https://github.com/crli/vue-cli-multipage)
 命名约定
 　　对于props声明的属性来说，在父级HTML模板中，属性名需要使用中划线写法
